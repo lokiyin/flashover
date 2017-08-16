@@ -1,21 +1,22 @@
 <template>
-  <div class="container container-table col-xs-8 col-xs-offset-2 col-lg-4 col-lg-offset-4">
-      <div class="row vertical-40p ">
-        <div class="container-fluid ">
-          <div class="text-center ">
+  <div class="container container-table">
+      <div class="row vertical-10p">
+        <div class="container">
+          <img src="/static/img/logo.png" class="center-block logo">
+          <div class="text-center col-md-4 col-sm-offset-4">
             <!-- login form -->
             <form class="ui form loginForm"  @submit.prevent="checkCreds">
 
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input class="form-control" name="username" placeholder="Nombre de Usuario" type="text" v-model="username">
+                <input class="form-control" name="username" placeholder="Username" type="text" v-model="username">
               </div>
 
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input class="form-control" name="password" placeholder="Clave" type="password" v-model="password">
+                <input class="form-control" name="password" placeholder="Password" type="password" v-model="password">
               </div>
-              <button type="submit" v-bind:class="'btn btn-primary btn-lg ' + loading">Entrar</button>
+              <button type="submit" v-bind:class="'btn btn-primary btn-lg ' + loading">Submit</button>
             </form>
 
             <!-- errors -->
@@ -104,28 +105,11 @@ export default {
 <style>
 html, body, .container-table {
   height: 100%;
-  
+  background-color: #282B30 !important;
 }
-body{
-  background: url("https://images5.alphacoders.com/695/695931.jpg") no-repeat center center fixed ;
-       -webkit-background-size:cover;
-       -moz-background-size:cover;
-       -o-background-size:cover;
-       background-size:cover;
-}
-
 .container-table {
     display: table;
     color: white;
-    background: rgba(255,255,255,0.75) !important ;
-    margin-top: 10%;
-    border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-}
-.text-center{
-  margin-bottom: 5%;
-  margin-top: 10%;
 }
 .vertical-center-row {
     display: table-cell;
